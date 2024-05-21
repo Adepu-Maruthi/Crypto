@@ -1,0 +1,242 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+
+.text_img{
+  position: absolute;
+  top: 40%;
+}
+.heading{
+  font-size: 4rem;
+  padding-left: 1em;
+}
+.headtext{
+  padding-left:4em;
+}
+.btn{
+  margin-left: 4em;
+  margin-top: 2em;
+}
+.containerr{
+  position: relative;
+}
+.texts{
+  position: absolute;
+  top: 20%;
+  left: 60%;
+}
+.containerr img{
+  border-radius: 0.3em;
+}
+.invite-text{
+  font-size: 4rem;
+ }
+/*.image img{
+  mix-blend-mode: luminosity;
+} */
+.workimage img{
+  width: 40vw !important;
+  box-shadow: 2px 2px 5px #fff ;
+}
+.worktext p{
+  font-size: 1.2rem;
+}
+.worktext button{
+  padding: 1em;
+  width: 10vw;
+  margin-bottom: 5em;
+}
+.textbox{
+  box-shadow: 2px 2px 5px #fff ;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 780px){
+    .home-img img{
+      height: 60vh !important;
+    }
+    .text_img{
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      font-size: 0.9rem;
+    }
+    .heading{
+      font-size: 2rem;
+      padding-left: 1.7em;
+    }
+    .texts{
+      position: absolute;
+      top: 10%;
+      left: 55%;
+    }
+    .features{
+      font-style: 2rem;
+    }
+    .fsize{
+      font-size: 2rem;
+    }
+    iframe{
+      height: 50vh !important;
+    }
+    .invite p{
+      font-size: 1.3rem;
+    }
+    .invite button{
+      width: 20vw !important;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+    .workimage img{
+      width: 90vw !important;
+    }
+}
+
+
+@media screen and (min-width: 810px){
+  .home-img img{
+    height: 40vh !important;
+  }
+  .text_img{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    font-size: 0.9rem;
+  }
+  .heading{
+    font-size: 2rem;
+    padding-left: 1.7em;
+  }
+  .texts{
+    position: absolute;
+    top: 10%;
+    left: 55%;
+  }
+  .features{
+    font-style: 2rem;
+  }
+  .fsize{
+    font-size: 2rem;
+  }
+  iframe{
+    height: 50vh !important;
+  }
+  .invite p{
+    font-size: 1.3rem;
+  }
+  .invite button{
+    width: 20vw !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .workimage img{
+    width: 90vw !important;
+  }
+}
+
+
+@media only screen and (min-width: 340px) and (max-width: 550px){
+  .home-img img{
+    height: 60vh !important;
+  }
+  .text_img{
+    position: absolute;
+    top: 2%;
+    left: 55%;
+    font-size: 0.7rem;
+  }
+  .heading{
+    font-size: 1rem;
+    padding-left: 2.8em;
+  }
+  .texts{
+    position: absolute;
+    top: 10%;
+    left: 55%;
+  }
+  .containerr .button{
+    margin-top: 0px;
+  }
+  .cardd .cardname{
+    margin-left: 4em;
+  }
+  .cardd .cardpara{
+    /* margin-left: 20vw; */
+    padding-left: 40vw;
+  }
+  .features{
+    font-size: 1rem !important;
+  }
+  .fsize{
+    font-size: 1rem;
+  }
+  .invite p{
+    font-size: 1.3rem;
+  }
+  .fpara{
+    font-size: 0.8em;
+  }
+  .invite button{
+    width: 20vw !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .workimage img{
+    width: 180vw !important;
+  }
+  /* .wordcard .button{
+    width: 100vw;
+    padding: 10vw;
+  } */
+  /* .navbar{
+    display: inline-flex;
+  } */
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1299px){
+  .home-img img{
+    height: 80vh !important;
+  }
+  .text_img{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    font-size: 1rem;
+  }
+  .heading{
+    font-size: 1.8rem;
+    padding-left: 2em;
+  }
+  .texts{
+    position: absolute;
+    top: 10%;
+    left: 55%;
+  }
+  .features{
+    font-size: 1rem !important;
+  }
+  .fsize{
+    font-size: 1rem;
+  }
+  .fpara{
+    font-size: 1em;
+  }
+  .workimage img{
+    width: 30vw !important;
+  }
+}
+@media only screen and (min-width:1300px){
+  .home-img img{
+    height: 100vh !important;
+  }
+  .workimage img{
+    width: 30vw !important;
+  }
+}
+.navbar-brand img{
+  mix-blend-mode: color;
+}

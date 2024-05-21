@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+::selection {
+    color: #fff;
+    background: #1cc7d0;
+}
+
+.wrapper {
+    height: 400px;
+    width: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.wrapper .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.wrapper:hover>.front-face {
+    transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.wrapper .back-face {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover>.back-face {
+    transform: rotateY(0deg);
+}
+
+.wrapper .back-face img {
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+.wrapper .back-face .info {
+    text-align: center;
+}
+
+.back-face .info .title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.back-face ul {
+    display: flex;
+}
+
+.back-face ul a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    margin: 0 5px;
+    line-height: 38px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+    transition: all 0.5s ease;
+}
+
+.back-face ul a:hover {
+    color: #1cc7d0;
+    border-color: #1cc7d0;
+    background: linear-gradient(375deg, transparent, transparent);
+}
+
+
+html {
+    height: 100%;
+    background: #223;
+    display: grid;
+    place-items: center;
+}
+
+.box {
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 100vw;
+    height: 10vmin;
+    background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-animation: bg-spin 3s linear infinite;
+    animation: bg-spin 3s linear infinite;
+}
+
+@-webkit-keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.box:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+/* home card css */
+[outlines="1"] * {
+    outline: 1px dashed
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%
+}
+
+/* responsive base font size using y = mx + b 'y-intercept form' => y = 0.00625x + 12 */
+html {
+    font-size: calc(0.625vmin + 0.75rem)
+}
+
+/* (320,14)(1280,20) */
+body {
+    font-size: 1rem;
+    margin: 0;
+    min-height: 100vh
+}
+
+/* Simple page banding attributes for use in 'Landing Page' layout */
+[band],
+[block] {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+}
+
+[band] {
+    flex-flow: row wrap;
+    width: 100%
+}
+
+/* row of columns, full viewport width */
+[block] {
+    flex-flow: column wrap
+}
+
+/* column of rows */
+
+[block] [block] {
+    width: 100%
+}
+
+/* block child blocks at full parent width */
+
+[padded] {
+    /*
+    responsive spacing y=mx+b, use at top level [band]/[block] for nice page spacing
+
+    top/bottom padding: p1(320,16) p2(1920, 72) => 0.035x + 4.8  => vary from 16 to  72px
+    left/right padding: p1(320, 8) p2(1920,320) => 0.195x - 54.4 => vary from  8 to 320px
+*/
+    padding: calc(3.5vh + 4.8px) calc(19.5vw - 54.4px);
+}
+
+/* prevent/enable text selection, also convenient for inadverted user multi-clicks */
+[no-select],
+[noselect] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+[select] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text
+}
+
+/* Absolutely, positively hide the element from view and voice-readers */
+[gone],
+.gone,
+[data-gone="1"],
+[hide],
+.hidden {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    z-index: -999999;
+    top: -999999px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    min-height: 0;
+    min-width: 0;
+    max-height: 0;
+    max-width: 0
+}
+
+
+body {
+    font-family: Inconsolata, monospace;
+    font-weight: 600;
+}
+
+.threed-child {
+    font-size: 3em;
+    width: 6em;
+    aspect-ratio: 9/16;
+    border-radius: 0.5em;
+    /* background-color: hsl(218.5, 79.2%, 66.1%, .5); */
+    background-color: #fff;
+    /* CornflowerBlue */
+    /* color: hsl(48, 100%, 93.1%); */
+    color: #000;
+    /* CornSilk */
+
+    /* GMD elevation 1dp */
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .20),
+        0px 1px 1px 0px rgba(0, 0, 0, .14),
+        0px 1px 3px 0px rgba(0, 0, 0, .12);
+}
+
+.threed-child:hover {
+    transform: scale(1.01);
+
+    z-index: 1;
+    /* on top of the rest, HTML default = 0 */
+    cursor: pointer;
+
+    /* GMD elevation 3dp */
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .20),
+        0px 3px 4px 0px rgba(0, 0, 0, .14),
+        0px 1px 8px 0px rgba(0, 0, 0, .12);
+}
+
+.threed-child:active {
+    /* Mouse/touch 'click' action */
+    transform: scale(1);
+}
+
+body[threed="1"] {
+    /* circumvents 'overflow jitter' in 3D when parent doesn't fit the viewport height */
+    overflow-y: scroll;
+}
+
+[threed="1"] .threed-parent {
+    perspective: 800px;
+    perspective-origin: center calc(50% - 20rem);
+    /* the higher the rem, the higher the tilt */
+    transition: all 0.5s ease-in-out;
+}
+
+[threed="1"] .threed-child {
+    transform-style: preserve-3d;
+    outline: 1px solid transparent;
+
+    --rotateX: 90deg;
+    --rotateY: 0deg;
+    --rotateZ: 0deg;
+}
+
+[threed="1"] .threed-child:hover {
+    --rotateX: 85deg;
+    --rotateY: 0deg;
+    --rotateZ: 0deg;
+}
+
+/* the '3D' shadow */
+/*-----------------*/
+[threed="1"] .threed-parent {
+    margin-top: -10rem;
+    /* move the parent a bit up */
+    filter: drop-shadow(0px 150px 7px rgba(0, 0, 0, .5));
+    /* That's it, really! */
+}
+
+/* animated view */
+/*---------------*/
+[threed="1"] .threed-child {
+    -webkit-animation: rotate 30s infinite linear;
+    animation: rotate 30s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ)) rotate(-180deg);
+    }
+
+    to {
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ)) rotate(-360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ)) rotate(-180deg);
+    }-
+
+    to {
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) rotateZ(var(--rotateZ)) rotate(-360deg);
+    }
+}
+
+
+.homeimage{
+    box-shadow: 2px 5px 5px #020202, 2px 5px 5px #020202,2px 5px 5px #020202,2px 5px 5px #020202;
+}
